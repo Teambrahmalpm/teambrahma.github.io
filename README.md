@@ -1,1 +1,1367 @@
-# teambrahma.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Team Brahma | Laxmipuram Pathuru</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#07070d;
+    color:white;
+    overflow-x:hidden;
+}
+
+:root{
+    --gold:#ffbd45;
+    --orange:#ff6a00;
+    --dark:#07070d;
+    --cream:#fff0d0;
+    --gray:#aaa9b5;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(5,5,12,.72);
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,190,70,.15);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-symbol{
+    font-size:35px;
+    color:var(--gold);
+}
+
+.logo h2{
+    font-family:Cinzel;
+    color:var(--gold);
+    font-size:19px;
+    letter-spacing:1px;
+}
+
+.logo p{
+    font-size:9px;
+    letter-spacing:3px;
+    color:#ddd;
+    margin-top:3px;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#eee;
+    font-size:13px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.nav-btn{
+    text-decoration:none;
+    color:#17100a;
+    font-weight:800;
+    font-size:12px;
+    padding:13px 21px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#ffd15b,#ff7118);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    padding:100px 7% 60px;
+}
+
+.hero-image{
+    position:absolute;
+    inset:0;
+
+    background-image:url("bappa.jpg");
+    background-size:cover;
+    background-position:center;
+
+    transform:scale(1.03);
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(4,4,10,.97) 0%,
+        rgba(4,4,10,.82) 34%,
+        rgba(4,4,10,.32) 65%,
+        rgba(4,4,10,.55) 100%
+    );
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:650px;
+}
+
+.small-title{
+    color:var(--gold);
+    letter-spacing:5px;
+    font-size:12px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:Cinzel;
+    font-size:clamp(50px,8vw,100px);
+    line-height:.9;
+    letter-spacing:-3px;
+}
+
+.hero h1 span{
+    display:block;
+    color:var(--gold);
+    text-shadow:0 0 35px rgba(255,180,50,.25);
+}
+
+.hero-script{
+    margin-top:25px;
+
+    font-family:'Playfair Display';
+    font-style:italic;
+
+    font-size:28px;
+    color:#ffe5bd;
+}
+
+.hero-description{
+    max-width:560px;
+    margin-top:20px;
+
+    color:#d1ced6;
+    line-height:1.8;
+    font-size:15px;
+}
+
+.hero-buttons{
+    margin-top:30px;
+
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 25px;
+    border-radius:40px;
+
+    text-decoration:none;
+    font-weight:800;
+    font-size:12px;
+
+    transition:.3s;
+}
+
+.btn-main{
+    background:linear-gradient(135deg,#ffd15a,#ff6b00);
+    color:#180e05;
+}
+
+.btn-outline{
+    color:white;
+    border:1px solid var(--gold);
+    background:rgba(255,255,255,.03);
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+/* FLOATING TEXT */
+
+.hero-side{
+    position:absolute;
+    right:4%;
+    top:42%;
+
+    writing-mode:vertical-rl;
+
+    color:var(--gold);
+    letter-spacing:7px;
+    font-size:12px;
+
+    z-index:3;
+}
+
+/* ================= VALUES ================= */
+
+.values{
+    background:var(--cream);
+    color:#25150c;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    text-align:center;
+}
+
+.value{
+    padding:28px 10px;
+    border-right:1px solid #dcc8a3;
+}
+
+.value:last-child{
+    border:none;
+}
+
+.value-icon{
+    font-size:27px;
+    margin-bottom:10px;
+}
+
+.value h3{
+    font-family:Cinzel;
+    font-size:13px;
+}
+
+.value p{
+    margin-top:5px;
+    font-size:11px;
+    color:#6e5d50;
+}
+
+/* ================= COMMON ================= */
+
+section{
+    padding:100px 7%;
+}
+
+.section-label{
+    color:var(--gold);
+    letter-spacing:5px;
+    font-size:11px;
+    font-weight:800;
+}
+
+.section-title{
+    font-family:Cinzel;
+    font-size:43px;
+    margin-top:10px;
+}
+
+.section-text{
+    max-width:650px;
+    color:var(--gray);
+    line-height:1.8;
+    margin-top:15px;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1.4fr;
+    gap:80px;
+    align-items:center;
+}
+
+.year{
+    font-family:Cinzel;
+    font-size:120px;
+    font-weight:800;
+    color:var(--gold);
+    line-height:.9;
+}
+
+.since{
+    letter-spacing:6px;
+    font-size:12px;
+    color:#ddd;
+    margin-bottom:15px;
+}
+
+.quote{
+    margin-top:30px;
+
+    border-left:2px solid var(--gold);
+
+    padding-left:25px;
+
+    color:#f5e2c0;
+
+    font-family:'Playfair Display';
+    font-style:italic;
+
+    font-size:24px;
+    line-height:1.5;
+}
+
+/* ================= CARDS ================= */
+
+.cards{
+    margin-top:45px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    padding:32px;
+
+    min-height:270px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,190,70,.18);
+
+    background:
+    linear-gradient(
+        145deg,
+        #171722,
+        #0c0c14
+    );
+
+    transition:.4s;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.card:before{
+    content:"";
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    right:-60px;
+    top:-60px;
+
+    border-radius:50%;
+
+    background:rgba(255,180,50,.08);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+
+    border-color:var(--gold);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.4);
+}
+
+.card-icon{
+    font-size:38px;
+}
+
+.card h3{
+    margin-top:30px;
+
+    font-family:Cinzel;
+    font-size:19px;
+}
+
+.card p{
+    color:#aaa8b2;
+
+    margin-top:12px;
+
+    font-size:13px;
+
+    line-height:1.7;
+}
+
+.card a{
+    display:inline-block;
+
+    margin-top:20px;
+
+    color:var(--gold);
+
+    font-size:11px;
+
+    font-weight:800;
+    text-decoration:none;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    margin-top:55px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    border:1px solid rgba(255,190,70,.18);
+
+    border-radius:18px;
+
+    overflow:hidden;
+}
+
+.stat{
+    text-align:center;
+    padding:30px;
+
+    border-right:1px solid rgba(255,190,70,.18);
+}
+
+.stat:last-child{
+    border:none;
+}
+
+.stat strong{
+    display:block;
+
+    font-family:Cinzel;
+
+    color:var(--gold);
+
+    font-size:34px;
+}
+
+.stat span{
+    color:#999;
+
+    font-size:10px;
+
+    letter-spacing:1px;
+}
+
+/* ================= EVENTS ================= */
+
+.events{
+    background:
+    radial-gradient(
+        circle at top,
+        rgba(255,150,30,.08),
+        transparent 45%
+    ),
+    #0a0a13;
+}
+
+.event-grid{
+    margin-top:45px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.event{
+    padding:30px;
+
+    border-radius:18px;
+
+    background:#14141f;
+
+    border:1px solid rgba(255,255,255,.07);
+
+    transition:.3s;
+}
+
+.event:hover{
+    transform:translateY(-7px);
+
+    border-color:var(--gold);
+}
+
+.event-number{
+    color:var(--gold);
+
+    font-family:Cinzel;
+
+    font-size:35px;
+}
+
+.event h3{
+    margin-top:20px;
+
+    font-family:Cinzel;
+}
+
+.event p{
+    margin-top:12px;
+
+    color:#aaa;
+
+    font-size:13px;
+
+    line-height:1.7;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery-grid{
+    margin-top:40px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+}
+
+.gallery-box{
+    height:250px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:#161620;
+}
+
+.gallery-box img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.gallery-box:hover img{
+    transform:scale(1.08);
+}
+
+.gallery-caption{
+    position:absolute;
+
+    bottom:0;
+    left:0;
+    right:0;
+
+    padding:20px;
+
+    background:linear-gradient(transparent,rgba(0,0,0,.9));
+
+    font-family:Cinzel;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    text-align:center;
+
+    margin-top:80px;
+
+    padding:80px 25px;
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,190,70,.25);
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,175,40,.14),
+        transparent 60%
+    );
+}
+
+.cta h2{
+    font-family:Cinzel;
+
+    font-size:42px;
+
+    margin-top:12px;
+}
+
+.cta p{
+    max-width:600px;
+
+    margin:15px auto 25px;
+
+    color:#aaa;
+
+    line-height:1.8;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:45px 7% 25px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    background:#05050b;
+}
+
+.footer-top{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+}
+
+.footer-brand h2{
+    font-family:Cinzel;
+
+    color:var(--gold);
+}
+
+.footer-brand p{
+    color:#888;
+
+    font-size:11px;
+
+    margin-top:7px;
+
+    letter-spacing:2px;
+}
+
+.social{
+    display:flex;
+
+    gap:10px;
+}
+
+.social a{
+    width:40px;
+    height:40px;
+
+    display:grid;
+    place-items:center;
+
+    border:1px solid #393944;
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:11px;
+
+    transition:.3s;
+}
+
+.social a:hover{
+    border-color:var(--gold);
+
+    color:var(--gold);
+}
+
+.copyright{
+    text-align:center;
+
+    margin-top:30px;
+
+    color:#555;
+
+    font-size:10px;
+}
+
+/* ================= ANIMATION ================= */
+
+.reveal{
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px){
+
+    .navbar{
+        padding:15px 5%;
+    }
+
+    .nav-links,
+    .nav-btn{
+        display:none;
+    }
+
+    .hero{
+        min-height:850px;
+
+        padding:120px 7% 60px;
+    }
+
+    .hero-overlay{
+        background:
+        linear-gradient(
+            180deg,
+            rgba(4,4,10,.82),
+            rgba(4,4,10,.75)
+        );
+    }
+
+    .hero-content{
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .hero-script{
+        font-size:23px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .hero-side{
+        display:none;
+    }
+
+    .values{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .value:nth-child(2){
+        border-right:none;
+    }
+
+    .value{
+        border-bottom:1px solid #dcc8a3;
+    }
+
+    section{
+        padding:75px 7%;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .year{
+        font-size:85px;
+    }
+
+    .section-title{
+        font-size:34px;
+    }
+
+    .cards,
+    .event-grid,
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat{
+        border-bottom:1px solid rgba(255,190,70,.18);
+    }
+
+    .stat:nth-child(2){
+        border-right:none;
+    }
+
+    .footer-top{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-symbol">ॐ</div>
+
+        <div>
+            <h2>TEAM BRAHMA</h2>
+            <p>LAXMIPURAM PATHURU</p>
+        </div>
+
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="#home">HOME</a>
+
+        <a href="#about">ABOUT</a>
+
+        <a href="#events">EVENTS</a>
+
+        <a href="#gallery">GALLERY</a>
+
+        <a href="#youth">YOUTH</a>
+
+        <a href="#contact">CONTACT</a>
+
+    </div>
+
+
+    <a href="#contact" class="nav-btn">
+        ♥ BE A PART
+    </a>
+
+</nav>
+
+
+
+<!-- ================= HERO ================= -->
+
+<header class="hero" id="home">
+
+    <div class="hero-image"></div>
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="hero-content reveal">
+
+        <div class="small-title">
+            GANAPATI BAPPA MORIYA
+        </div>
+
+
+        <h1>
+            TEAM
+            <span>BRAHMA</span>
+        </h1>
+
+
+        <div class="hero-script">
+            Bappa Brings Us Together.
+        </div>
+
+
+        <p class="hero-description">
+
+            Laxmipuram Pathuru lo bhakti,
+            youth power, unity and service tho
+            Bappa ni grand ga celebrate chesthunna
+            oka family — <b>Team Brahma.</b>
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#about" class="btn btn-main">
+                EXPLORE OUR JOURNEY →
+            </a>
+
+            <a href="#events" class="btn btn-outline">
+                VIEW EVENTS
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-side">
+        GANAPATI BAPPA MORIYA
+    </div>
+
+</header>
+
+
+
+<!-- ================= VALUES ================= -->
+
+<div class="values">
+
+    <div class="value">
+
+        <div class="value-icon">🙏</div>
+
+        <h3>FAITH</h3>
+
+        <p>Our Strength</p>
+
+    </div>
+
+
+    <div class="value">
+
+        <div class="value-icon">🤝</div>
+
+        <h3>UNITY</h3>
+
+        <p>One Team · One Family</p>
+
+    </div>
+
+
+    <div class="value">
+
+        <div class="value-icon">🌱</div>
+
+        <h3>SERVICE</h3>
+
+        <p>For Our Community</p>
+
+    </div>
+
+
+    <div class="value">
+
+        <div class="value-icon">🪔</div>
+
+        <h3>TRADITION</h3>
+
+        <p>Our Roots · Our Pride</p>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <div class="about">
+
+        <div class="reveal">
+
+            <div class="since">
+                OUR JOURNEY
+            </div>
+
+            <div class="year">
+                2003
+            </div>
+
+            <p style="color:#aaa;margin-top:15px;">
+                YEARS OF DEVOTION,
+                SERVICE & TOGETHERNESS
+            </p>
+
+        </div>
+
+
+        <div class="reveal">
+
+            <div class="section-label">
+                SAME FAITH · BIGGER FAMILY
+            </div>
+
+            <h2 class="section-title">
+                More Than A Festival.
+            </h2>
+
+            <p class="section-text">
+
+                Team Brahma is a youth-powered
+                Ganesh committee from
+                <b>Laxmipuram Pathuru.</b>
+
+                Since 2003, our journey has been
+                about devotion, friendship,
+                culture, celebration and
+                community.
+
+                Every Bappa festival gives us
+                another reason to come together
+                and create memories.
+
+            </p>
+
+
+            <div class="quote">
+
+                “Bappa's blessings guide our youth
+                towards a brighter, kinder and
+                stronger tomorrow.”
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= YOUTH ================= -->
+
+<section id="youth">
+
+    <div class="section-label reveal">
+        OUR BRAHMA SPIRIT
+    </div>
+
+    <h2 class="section-title reveal">
+        This Is Team Brahma.
+    </h2>
+
+    <p class="section-text reveal">
+
+        Oka peru kaadu...
+        oka feeling.
+        Oka committee kaadu...
+        oka family.
+
+    </p>
+
+
+    <div class="cards">
+
+
+        <div class="card reveal">
+
+            <div class="card-icon">
+                🕉️
+            </div>
+
+            <h3>
+                DEVOTION
+            </h3>
+
+            <p>
+
+                Bappa meeda nammakam,
+                mana traditions meeda respect,
+                positive energy tho celebration.
+
+            </p>
+
+            <a href="#contact">
+                JOIN THE SPIRIT →
+            </a>
+
+        </div>
+
+
+
+        <div class="card reveal">
+
+            <div class="card-icon">
+                🔥
+            </div>
+
+            <h3>
+                YOUTH POWER
+            </h3>
+
+            <p>
+
+                Young minds.
+                Big ideas.
+                Strong teamwork.
+
+                Kalisi plan chestham.
+                Kalisi execute chestham.
+
+            </p>
+
+            <a href="#contact">
+                MEET OUR YOUTH →
+            </a>
+
+        </div>
+
+
+
+        <div class="card reveal">
+
+            <div class="card-icon">
+                🤝
+            </div>
+
+            <h3>
+                COMMUNITY FIRST
+            </h3>
+
+            <p>
+
+                Mana celebration mana varake
+                kaadu.
+
+                Community kosam,
+                village kosam,
+                kalisi munduku.
+
+            </p>
+
+            <a href="#contact">
+                BE A PART →
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- STATS -->
+
+    <div class="stats reveal">
+
+        <div class="stat">
+
+            <strong>2003</strong>
+
+            <span>
+                STARTED THE JOURNEY
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>1</strong>
+
+            <span>
+                UNITED FAMILY
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>∞</strong>
+
+            <span>
+                MEMORIES
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>♥</strong>
+
+            <span>
+                FOR BAPPA
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EVENTS ================= -->
+
+<section class="events" id="events">
+
+    <div class="section-label reveal">
+        CELEBRATIONS
+    </div>
+
+    <h2 class="section-title reveal">
+        Our Events
+    </h2>
+
+    <p class="section-text reveal">
+
+        Bappa vachina prathi sari
+        mana ooru celebration mode lo untundi.
+
+    </p>
+
+
+    <div class="event-grid">
+
+
+        <div class="event reveal">
+
+            <div class="event-number">
+                01
+            </div>
+
+            <h3>
+                GANESH CHATURTHI
+            </h3>
+
+            <p>
+
+                Grand ga Bappa ni welcome chesi,
+                devotion, music and positive
+                vibes tho celebration start chestham.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="event reveal">
+
+            <div class="event-number">
+                02
+            </div>
+
+            <h3>
+                YOUTH CELEBRATIONS
+            </h3>
+
+            <p>
+
+                Cultural programmes,
+                games, music and youth activities
+                tho unforgettable memories.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="event reveal">
+
+            <div class="event-number">
+                03
+            </div>
+
+            <h3>
+                VISARJAN
+            </h3>
+
+            <p>
+
+                Bappa ki grand farewell.
+
+                Bhakti tho start chesi,
+                emotional memories tho conclude chestham.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= GALLERY ================= -->
+
+<section id="gallery">
+
+    <div class="section-label reveal">
+        OUR MEMORIES
+    </div>
+
+    <h2 class="section-title reveal">
+        Bappa Moments.
+    </h2>
+
+    <p class="section-text reveal">
+
+        Mana festival memories ni ikkada
+        showcase cheyyachu.
+
+    </p>
+
+
+    <div class="gallery-grid">
+
+
+        <div class="gallery-box reveal">
+
+            <img src="bappa.jpg">
+
+            <div class="gallery-caption">
+                BAPPA 2026
+            </div>
+
+        </div>
+
+
+        <div class="gallery-box reveal">
+
+            <img src="bappa.jpg">
+
+            <div class="gallery-caption">
+                TEAM BRAHMA
+            </div>
+
+        </div>
+
+
+        <div class="gallery-box reveal">
+
+            <img src="bappa.jpg">
+
+            <div class="gallery-caption">
+                GANESH UTSAV
+            </div>
+
+ 
